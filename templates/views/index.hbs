@@ -1,0 +1,304 @@
+{{>header}}
+<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-grid--stretch">
+	<div class="kt-container kt-body  kt-grid kt-grid--ver" id="kt_body">
+		<div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+
+			<!-- begin:: Begin Subheader -->
+
+
+
+			<!-- begin:: End Subheader -->
+
+			<!-- begin:: Content -->
+			<div class="kt-content kt-grid__item kt-grid__item--fluid " style="margin-top: 2%; ">
+
+				<!--Begin::Dashboard 5-->
+				<div class="kt-portlet" style="border-top-left-radius: 4px; border-top-right-radius: 4px;" id="main_head">
+					<div class="kt-invoice-1">
+						<div class="kt-invoice__wrapper" style="position: relative">
+							<div class="area">
+								<div class="welcome-banner">
+
+								</div>
+								<ul class="circles">
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="kt-portlet__body">
+						<div class="kt-section__content kt-section__content--solid">
+							<h3>
+								You can serach for Weather here
+							</h3>
+						</div>
+						<div class="input-group" style="margin-top: 2% ">
+							<div class="input-group-prepend">
+								<button class="btn btn-secondary" type="button" style="pointer-events: none;"><i
+										class="la la-search"></i></button>
+							</div>
+							<input type="text" id="enterAddress" class="form-control" placeholder="Search for...">
+							<div class="input-group-append">
+								<button class="btn btn-secondary" id="kt_notify_btn" type="button">Go!</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--Begin::Section  -->
+				<div class="row" style="display: none;" id="weather_div"> 
+					<div class="col-xl-12">
+
+						<!--begin:: Widgets/Best Sellers-->
+						<div class="kt-portlet kt-portlet--height-fluid">
+
+							<div class="kt-portlet__body" style="position: relative;">
+								<div id="weather_loader"></div>
+								<div class="row">
+									<div class="kt-portlet__body kt-portlet__body--fit-y">
+
+										<!--begin::Widget -->
+										<div class="kt-widget kt-widget--user-profile-1">
+											<div class="kt-widget__head" style="text-align: center; margin-top:5%">
+												<div class="kt-widget__content" style="margin: 0 auto;">
+													<div class="kt-widget__section">
+														<h3 class="kt-widget__username" style="pointer-events:none;" id="formattedAddress">
+														</h3><br />
+														<span id="main_svg"></span>
+													</div>
+													<div class="kt-widget__action">
+														<span class="btn btn-label-warning btn-sm"
+															id="tempData">
+												
+													</div>
+												</div>
+											</div>
+											<div class="kt-widget__body" style="text-align:center;">
+												<div class="kt-widget__content">
+													<div class="kt-widget__info">
+														<span class="kt-widget__label">Precipitation: <span
+																id="tempPreci"></span>%</span>
+													</div>
+													<div class="kt-widget__info">
+														<span class="kt-widget__label">Wind: <span
+																id="tempWind"></span>km/h</span>
+													</div>
+													<div class="kt-widget__info">
+														<span class="kt-widget__label">Humidity: <span
+																id="tempHumid"></span>%</span>
+													</div>
+												</div>
+												<h5 id="dateTime"></h5>
+											</div>
+										</div>
+
+										<!--end::Widget -->
+									</div>
+								</div>
+								<div class="kt-widget5 row" style="overflow: hidden">
+									<div class="kt-widget5__item col-md-6">
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__pic">
+											</div>
+											<div class="kt-widget5__section">
+												<div class="kt-widget__action">
+													<span class="btn btn-label-info btn-sm">39<small>°C</small></span>
+
+												</div>
+												<p class="kt-widget5__desc">
+													Haze
+												</p>
+												<div class="kt-widget5__info">
+													<span>Date:</span>
+													<span class="kt-font-info">7/1/2019</span>
+													<span>Time:</span>
+													<span class="kt-font-info">3:21:30 AM</span>
+												</div>
+											</div>
+										</div>
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__stats" style="text-align: left;">
+												<span class="kt-widget5__number">Precipitation: 10%</span>
+												<span class="kt-widget5__number">Wind: 10%</span>
+												<span class="kt-widget5__number">Humidity: 10%</span>
+											</div>
+										</div>
+									</div>
+									<div class="kt-widget5__item col-md-6">
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__pic">												
+											</div>
+											<div class="kt-widget5__section">
+												<div class="kt-widget__action">
+													<span
+														class="btn btn-label-warning btn-sm">39<small>°C</small></span>
+
+												</div>
+												<p class="kt-widget5__desc">
+													Haze
+												</p>
+												<div class="kt-widget5__info">
+													<span>Date:</span>
+													<span class="kt-font-info">7/1/2019</span>
+													<span>Time:</span>
+													<span class="kt-font-info">3:21:30 AM</span>
+												</div>
+											</div>
+										</div>
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__stats" style="text-align: left;">
+												<span class="kt-widget5__number">Precipitation: <span>10%</span></span>
+												<span class="kt-widget5__number">Wind: 10%</span>
+												<span class="kt-widget5__number">Humidity: 10%</span>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="kt-widget5 row" style="overflow: hidden">
+									<div class="kt-widget5__item col-md-6">
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__pic">	
+											</div>
+											<div class="kt-widget5__section">
+												<div class="kt-widget__action">
+													<span
+														class="btn btn-label-warning btn-sm">39<small>°C</small></span>
+
+												</div>
+												<p class="kt-widget5__desc">
+													Haze
+												</p>
+												<div class="kt-widget5__info">
+													<span>Date:</span>
+													<span class="kt-font-info">7/1/2019</span>
+													<span>Time:</span>
+													<span class="kt-font-info">3:21:30 AM</span>
+												</div>
+											</div>
+										</div>
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__stats" style="text-align: left;">
+												<span class="kt-widget5__number">Precipitation: 10%</span>
+												<span class="kt-widget5__number">Wind: 10%</span>
+												<span class="kt-widget5__number">Humidity: 10%</span>
+											</div>
+										</div>
+									</div>
+									<div class="kt-widget5__item col-md-6">
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__pic">
+											</div>
+											<div class="kt-widget5__section">
+												<div class="kt-widget__action">
+													<span
+														class="btn btn-label-warning btn-sm">39<small>°C</small></span>
+
+												</div>
+												<p class="kt-widget5__desc">
+													Haze
+												</p>
+												<div class="kt-widget5__info">
+													<span>Date:</span>
+													<span class="kt-font-info">7/1/2019</span>
+													<span>Time:</span>
+													<span class="kt-font-info">3:21:30 AM</span>
+												</div>
+											</div>
+										</div>
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__stats" style="text-align: left;">
+												<span class="kt-widget5__number">Precipitation: <span>10%</span></span>
+												<span class="kt-widget5__number">Wind: 10%</span>
+												<span class="kt-widget5__number">Humidity: 10%</span>
+											</div>
+										</div>
+									</div>
+
+								</div>
+								<div class="kt-widget5 row" style="overflow: hidden">
+									<div class="kt-widget5__item col-md-6">
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__pic">	
+											</div>
+											<div class="kt-widget5__section">
+												<div class="kt-widget__action">
+													<span
+														class="btn btn-label-warning btn-sm">39<small>°C</small></span>
+
+												</div>
+												<p class="kt-widget5__desc">
+													Haze
+												</p>
+												<div class="kt-widget5__info">
+													<span>Date:</span>
+													<span class="kt-font-info">7/1/2019</span>
+													<span>Time:</span>
+													<span class="kt-font-info">3:21:30 AM</span>
+												</div>
+											</div>
+										</div>
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__stats" style="text-align: left;">
+												<span class="kt-widget5__number">Precipitation: 10%</span>
+												<span class="kt-widget5__number">Wind: 10%</span>
+												<span class="kt-widget5__number">Humidity: 10%</span>
+											</div>
+										</div>
+									</div>
+									<div class="kt-widget5__item col-md-6">
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__pic">
+											</div>
+											<div class="kt-widget5__section">
+												<div class="kt-widget__action">
+													<span class="btn btn-label-info btn-sm">39<small>°C</small></span>
+
+												</div>
+												<p class="kt-widget5__desc">
+													Haze
+												</p>
+												<div class="kt-widget5__info">
+													<span>Date:</span>
+													<span class="kt-font-info">7/1/2019</span>
+													<span>Time:</span>
+													<span class="kt-font-info">3:21:30 AM</span>
+												</div>
+											</div>
+										</div>
+										<div class="kt-widget5__content">
+											<div class="kt-widget5__stats" style="text-align: left;">
+												<span class="kt-widget5__number">Precipitation: <span>10%</span></span>
+												<span class="kt-widget5__number">Wind: 10%</span>
+												<span class="kt-widget5__number">Humidity: 10%</span>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!--end:: Widgets/Best Sellers-->
+					</div>
+				</div>
+
+				<!--End::Section-->
+
+				<!--End::Dashboard 5-->
+			</div>
+
+			<!-- end:: Content -->
+		</div>
+	</div>
+</div>
+
+{{>footers}}
