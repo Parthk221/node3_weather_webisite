@@ -523,7 +523,7 @@ var KTBootstrapNotifyDemo = function () {
             $('html, body').animate({
                 scrollTop: $("#weather_div").offset().top - 50
             }, 2000);
-            fetch(`http://localhost:3000/weather?address=${address.value}`).then((response) => {
+            fetch(`/weather?address=${address.value}`).then((response) => {
                 response.json().then((re_data) => {
                     if (re_data.error) {
                         content.message = re_data.error;
