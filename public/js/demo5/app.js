@@ -460,13 +460,13 @@ var dateFormat= (re_data) => {
 var timeFormat = (unix_timestamp) => {
     var dt = new Date(unix_timestamp*1000);
     var hours = dt.getHours();
-    if (hours - 12 === 0) {
+    if (hours - 12 === 12) {
         dt = "12 AM"
     } else if (hours === 12) {
         dt = dt.getHours() + " PM"
     }else if (hours > 12) {
         dt = dt.getHours() - 12 + " PM"
-    }else if (hours < 12) {
+    }else if (hours <= 12) {
         dt = dt.getHours() + " AM"
     }
     return dt
@@ -522,7 +522,7 @@ var KTBootstrapNotifyDemo = function () {
             $("#weather_div").fadeIn("fast");
             $("#weather_loader").fadeIn("fast");
             $('html, body').animate({
-                scrollTop: $("#weather_div").offset().top
+                scrollTop: $("#enterAddress").offset().top
             }, 2000);
             fetch(`/weather?address=${address.value}`).then((response) => {
                 response.json().then((re_data) => {
@@ -544,7 +544,7 @@ var KTBootstrapNotifyDemo = function () {
                                 x: 20, 
                                 y: 20
                             },
-                            delay: 4000,
+                            delay: 8000,
                             z_index: 999,
                             animate: {
                                 enter: 'animated fadeIn',
