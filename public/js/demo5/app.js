@@ -518,10 +518,11 @@ var KTBootstrapNotifyDemo = function () {
 
         $('#kt_notify_btn').click(function() {
             var content = {};
+            $("#error_show").hide();
             $("#weather_div").fadeIn("fast");
             $("#weather_loader").fadeIn("fast");
             $('html, body').animate({
-                scrollTop: $("#weather_div").offset().top - 50
+                scrollTop: $("#weather_div").offset().top
             }, 2000);
             fetch(`/weather?address=${address.value}`).then((response) => {
                 response.json().then((re_data) => {
@@ -550,19 +551,15 @@ var KTBootstrapNotifyDemo = function () {
                                 exit: 'animated fadeOut'
                             }
                         });
-                        $('html, body').animate({
-                            scrollTop: $("#main_head").offset().top
-                        }, 2000);
                         $("#weather_div").fadeOut("slow");
                         $("#weather_loader").fadeOut("slow");
-                       
+                        $("#error_show").fadeIn("slow");
                     }
                     else{
                         
                         changeWeather(re_data);
                         changeTempAndDate(re_data);
                         $("#weather_loader").fadeOut("slow");
-                        
                     }
                 })
             })

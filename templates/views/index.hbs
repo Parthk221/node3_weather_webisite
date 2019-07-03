@@ -13,7 +13,8 @@
 			<div class="kt-content kt-grid__item kt-grid__item--fluid " style="margin-top: 2%; ">
 
 				<!--Begin::Dashboard 5-->
-				<div class="kt-portlet" style="border-top-left-radius: 4px; border-top-right-radius: 4px;" id="main_head">
+				<div class="kt-portlet" style="border-top-left-radius: 4px; border-top-right-radius: 4px;"
+					id="main_head">
 					<div class="kt-invoice-1">
 						<div class="kt-invoice__wrapper" style="position: relative">
 							<div class="area">
@@ -38,7 +39,7 @@
 					<div class="kt-portlet__body">
 						<div class="kt-section__content kt-section__content--solid">
 							<h3>
-								You can serach for Weather here
+								You can search for Weather of a place here
 							</h3>
 						</div>
 						<div class="input-group" style="margin-top: 2% ">
@@ -46,7 +47,7 @@
 								<button class="btn btn-secondary" type="button" style="pointer-events: none;"><i
 										class="la la-search"></i></button>
 							</div>
-							<input type="text" id="enterAddress" class="form-control" placeholder="Search for...">
+							<input type="text" id="enterAddress" class="form-control" placeholder="Search for an address...">
 							<div class="input-group-append">
 								<button class="btn btn-secondary" id="kt_notify_btn" type="button">Go!</button>
 							</div>
@@ -54,12 +55,32 @@
 					</div>
 				</div>
 				<!--Begin::Section  -->
-				<div class="row" style="display: none;" id="weather_div"> 
+				<div class="row" id="error_show" style="display: none; overflow:hidden;">
+					<div class="kt-portlet">
+						<div class="kt-portlet__body kt-portlet--height-fluid">
+							<div class="kt-grid__item kt-grid__item--fluid kt-grid  kt-error-v5"
+								style="background-image: url(/media/error/bg5.jpg);">
+								<div class="kt-error_container">
+									<span class="kt-error_title">
+										<h1>Oops!</h1>
+									</span>
+									<p class="kt-error_subtitle">
+										Something went wrong here.
+									</p>
+									<p class="kt-error_description">
+										Check for an error notification.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="row" style="display: none;" id="weather_div">
 					<div class="col-xl-12">
 
 						<!--begin:: Widgets/Best Sellers-->
 						<div class="kt-portlet kt-portlet--height-fluid">
-
 							<div class="kt-portlet__body" style="position: relative;">
 								<div id="weather_loader"></div>
 								<div class="row">
@@ -70,14 +91,14 @@
 											<div class="kt-widget__head" style="text-align: center; margin-top:5%">
 												<div class="kt-widget__content" style="margin: 0 auto;">
 													<div class="kt-widget__section">
-														<h3 class="kt-widget__username" style="pointer-events:none;" id="formattedAddress">
+														<h3 class="kt-widget__username" style="pointer-events:none;"
+															id="formattedAddress">
 														</h3><br />
 														<span id="main_svg"></span>
 													</div>
 													<div class="kt-widget__action">
-														<span class="btn btn-label-warning btn-sm"
-															id="tempData">
-												
+														<span class="btn btn-label-warning btn-sm" id="tempData">
+
 													</div>
 												</div>
 											</div>
@@ -134,7 +155,7 @@
 									</div>
 									<div class="kt-widget5__item col-md-6">
 										<div class="kt-widget5__content">
-											<div class="kt-widget5__pic">												
+											<div class="kt-widget5__pic">
 											</div>
 											<div class="kt-widget5__section">
 												<div class="kt-widget__action">
@@ -166,7 +187,7 @@
 								<div class="kt-widget5 row" style="overflow: hidden">
 									<div class="kt-widget5__item col-md-6">
 										<div class="kt-widget5__content">
-											<div class="kt-widget5__pic">	
+											<div class="kt-widget5__pic">
 											</div>
 											<div class="kt-widget5__section">
 												<div class="kt-widget__action">
@@ -227,7 +248,7 @@
 								<div class="kt-widget5 row" style="overflow: hidden">
 									<div class="kt-widget5__item col-md-6">
 										<div class="kt-widget5__content">
-											<div class="kt-widget5__pic">	
+											<div class="kt-widget5__pic">
 											</div>
 											<div class="kt-widget5__section">
 												<div class="kt-widget__action">
